@@ -1,4 +1,17 @@
+.links {
+    padding: 10px;
+    background-color: blueviolet;
+}
+
 .links a {
+    color: white;
+    padding: 10px;
+    font-weight: 700;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.links a:hover {
+    background-color:blue;
+    padding: 10px;
 }
