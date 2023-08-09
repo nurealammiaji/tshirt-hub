@@ -1,6 +1,6 @@
 import './Cart.css';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, removeFromCart}) => {
 
     return (
         <div>
@@ -8,7 +8,7 @@ const Cart = ({cart}) => {
             {
                 cart.map(tshirt => <p key={tshirt._id}>
                     {tshirt.name}<span> </span>
-                    <button>X</button>
+                    <button onClick={() => removeFromCart(tshirt._id)}>X</button>
                     </p>)
             }
         </div>

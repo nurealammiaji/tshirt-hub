@@ -15,6 +15,11 @@ const Home = () => {
         setCart(newCart);
     }
 
+    const removeFromCart = (id) => {
+        let remaining = cart.filter(tshirt => tshirt._id !== id);
+        setCart(remaining);
+    }
+
     return (
         <div className="home-layout">
             <div className="tshirt-area">
@@ -27,7 +32,7 @@ const Home = () => {
             <div className="cart-area">
                 <div className='cart-container'>
                     {
-                        <Cart cart={cart}></Cart>
+                        <Cart cart={cart} removeFromCart={removeFromCart}></Cart>
                     }
                 </div>
             </div>
