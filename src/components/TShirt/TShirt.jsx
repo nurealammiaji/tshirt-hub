@@ -8,9 +8,11 @@ const TShirt = ({tshirt}) => {
             <div className="tshirt-image">
                 <img src={picture} alt="" />
             </div>
-            <h4>{name}</h4>
-            <p>Price: ${price}</p>
-            <button>Buy Now</button>
+            <div className='tshirt-details'>
+                <h4>{name}</h4>
+                <p>Price: ${price}</p>
+                <button>Buy Now</button>
+            </div>
         </div>
     );
 };
