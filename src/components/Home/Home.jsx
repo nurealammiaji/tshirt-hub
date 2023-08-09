@@ -11,8 +11,14 @@ const Home = () => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (tshirt) => {
-        let newCart = [...cart, tshirt];
-        setCart(newCart);
+        const existing = cart.find(ts => ts._id === tshirt._id);
+        if (existing) {
+            alert("already added");
+        }
+        else {
+            let newCart = [...cart, tshirt];
+            setCart(newCart);
+        }
     }
 
     const removeFromCart = (id) => {
