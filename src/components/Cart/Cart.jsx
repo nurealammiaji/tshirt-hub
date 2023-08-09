@@ -2,10 +2,15 @@ import './Cart.css';
 
 const Cart = ({cart}) => {
 
-    const {name} = cart;
     return (
         <div>
-            <h3>{name}</h3>
+            <h3>Order Summary: {cart.length}</h3>
+            {
+                cart.map(tshirt => <p key={tshirt._id}>
+                    {tshirt.name}<span> </span>
+                    <button>X</button>
+                    </p>)
+            }
         </div>
     );
 };

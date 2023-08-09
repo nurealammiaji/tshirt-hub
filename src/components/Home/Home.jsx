@@ -25,10 +25,9 @@ const Home = () => {
                 </div>
             </div>
             <div className="cart-area">
-                <h3>Cart Area: {cart.length}</h3>
-                <div>
+                <div className='cart-container'>
                     {
-                        cart.map(tshirt => (<Cart key={tshirt._id} cart={cart}></Cart>))
+                        <Cart cart={cart}></Cart>
                     }
                 </div>
             </div>
