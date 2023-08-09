@@ -1,8 +1,9 @@
 import './TShirt.css';
 
-const TShirt = ({tshirt}) => {
+const TShirt = ({tshirt, addToCart}) => {
 
     const {_id, name, picture, price} = tshirt;
+
     return (
         <div className='tshirt-card'>
             <div className="tshirt-image">
@@ -11,7 +12,7 @@ const TShirt = ({tshirt}) => {
             <div className='tshirt-details'>
                 <h4>{name}</h4>
                 <p>Price: ${price}</p>
-                <button>Buy Now</button>
+                <button className='tshirt-btn' onClick={() => addToCart(tshirt)}>Buy Now</button>
             </div>
         </div>
     );
