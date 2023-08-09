@@ -2,7 +2,7 @@ import './TShirt.css';
 
 const TShirt = ({tshirt, addToCart}) => {
 
-    const {_id, name, picture, price} = tshirt;
+    const {name, picture, price} = tshirt;
 
     return (
         <div className='tshirt-card'>
