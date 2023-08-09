@@ -2,6 +2,7 @@ import './Home.css';
 import { useLoaderData } from "react-router-dom";
 import TShirt from '../TShirt/TShirt';
 import { useState } from 'react';
+import Cart from '../Cart/Cart';
 
 const Home = () => {
 
@@ -9,8 +10,9 @@ const Home = () => {
 
     const [cart, setCart] = useState([]);
 
-    const addToCart = (id) => {
-        console.log(id, 'button clicked')
+    const addToCart = (tshirt) => {
+        let newCart = [...cart, tshirt];
+        setCart(newCart);
     }
 
     return (
@@ -23,7 +25,12 @@ const Home = () => {
                 </div>
             </div>
             <div className="cart-area">
-                <h3>Cart Area</h3>
+                <h3>Cart Area: {cart.length}</h3>
+                <div>
+                    {
+                        cart.map(tshirt => (<Cart key={tshirt._id} cart={cart}></Cart>))
+                    }
+                </div>
             </div>
         </div>
     );
