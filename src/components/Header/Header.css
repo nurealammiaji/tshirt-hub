@@ -1,16 +1,31 @@
-.links {
-    padding: 20px 0px;
+.nav-bar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 20px 0px; */
     background-color: blueviolet;
 }
 
-.links a {
+.nav-logo {
+    font-size: 25px;
+}
+
+.nav-logo a {
     color: white;
-    padding: 20px;
+    text-decoration: none;
+    padding: 25px;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    padding: 25px;
     font-weight: 700;
     text-decoration: none;
 }
 
-.links a:hover {
+.nav-links a:hover {
     background-color:blue;
-    padding: 20px;
+    padding: 25px;
 }
