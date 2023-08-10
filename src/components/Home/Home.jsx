@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Cart from '../Cart/Cart';
 import toast from 'react-hot-toast';
 
-
 const Home = () => {
 
     const tshirts = useLoaderData();
