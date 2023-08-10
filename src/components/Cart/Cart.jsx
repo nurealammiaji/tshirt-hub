@@ -7,9 +7,22 @@ const Cart = ({cart, removeFromCart}) => {
         massage = "Please buy somthing !!";
     }
 
+    let plural;
+    if (cart.length === 1) {
+        plural = "T-Shirt";
+    }
+    else if (cart.length >= 1) {
+        plural = "T-Shirts";
+    }
+    else {
+        plural = "";
+    }
+
     return (
         <div>
-            <h3>Order Quantity: {cart.length}</h3>
+            <h3>Quantity: {cart.length} {plural}</h3>
+            <hr />
+            <br />
             {massage}
             {
                 cart.map(tshirt => <div className='cart-item' key={tshirt._id}>
