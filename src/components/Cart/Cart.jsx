@@ -4,12 +4,12 @@ const Cart = ({cart, removeFromCart}) => {
 
     return (
         <div>
-            <h3>Order Summary: {cart.length}</h3>
+            <h3>Order Quantity: {cart.length}</h3>
             {
-                cart.map(tshirt => <p key={tshirt._id}>
-                    {tshirt.name}<span> </span>
+                cart.map(tshirt => <div className='cart-item' key={tshirt._id}>
+                    <p>{tshirt.name}</p>
                     <button onClick={() => removeFromCart(tshirt._id)}>X</button>
-                    </p>)
+                    </div>)
             }
         </div>
     );
